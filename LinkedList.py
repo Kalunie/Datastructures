@@ -4,13 +4,11 @@ class Node:
         self.next = tail
 
 class LinkedList:
-    def __init__(self, *start):
+    def __init__(self):
         self.head = None
-        for _ in start:
-            self.prepend(_)
-
 
     def prepend(self, value):
+        #add new node and point next to the old head.
         self.head = Node(value, self.head)
 
 
@@ -29,6 +27,7 @@ class LinkedList:
         return Flase
 
     def pop(self):
+        #if the linkedList is empty raise an exeption.
         if self.head is None:
             raise Exception ("Empty List.")
         val = self.head.value
@@ -40,4 +39,3 @@ class LinkedList:
         while n != None:
             yield n.value
             n = n.next
-            
