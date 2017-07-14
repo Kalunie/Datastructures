@@ -1,5 +1,6 @@
 class Node:
     def __init__(self, value, tail):
+        #added note directly
         self.value = value
         self.next = tail
 
